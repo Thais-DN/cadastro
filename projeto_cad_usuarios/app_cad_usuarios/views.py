@@ -11,7 +11,7 @@ def usuarios(request):
     novo_usuario.save()
     
     usuarios = {
-        'usuarios': usuario.object.all()
+        'usuarios': Usuario.objects.all()
     }
 
     return render(request, 'usuarios/usuarios.html', usuarios)
